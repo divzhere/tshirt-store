@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.all-tshirt-container {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: dense;
+    grid-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tshirt-contianer {
+    grid-row: span 1;
+    grid-column: span 1;
 }
 
-.App-link {
-  color: #61dafb;
+.tshirt-image img {
+    max-width: 200px;
+    max-height: 600px;
+    object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-button {
+    height: 36px;
+    padding: 0 16px;
+    line-height: 34px;
+    min-width: 200px;
+    transition: background .2s, border-color, .2s, color .2s;
+    outline: 0;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid transparent;
+    background: #222;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 400;
+}
+
+.add-button:hover {
+    background: #CD7F32;
 }
